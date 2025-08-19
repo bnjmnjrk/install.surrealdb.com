@@ -294,7 +294,7 @@ fetch() {
             err "$3"
         }
     elif [ "$1" = wget ]; then
-        wget --quiet "$2" || {
+        wget --quiet --output-document=- "$2" || {
             err "$3"
         }
     fi
